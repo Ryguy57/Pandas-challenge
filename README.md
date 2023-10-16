@@ -55,7 +55,6 @@ school_df.head()
 ---------------------------------------------------
 
 #### **Import Dependencies & Merge Pandas DataFrames**
-
 Created a high-level snapshot of the district's key metrics in a DataFrame
 
 <img src="images\DistrictSnapshot.png"alt= "snapshot">
@@ -63,18 +62,13 @@ Created a high-level snapshot of the district's key metrics in a DataFrame
 ---------------------------------------------------
 
 #### **Per School Summary**
-
 Created a DataFrame called per_school_summary with columns for School Type, Total Students, Total School Budget, Per Student Budget, Average Math Score, Average Reading Score, % Passing Math, % Passing Reading,% Overall Passing.
-
-```
-```
 
 <img src="images\PerSchool.png"alt="Perschool">
 
 ---------------------------------------------------
 
 #### **Top 5 Highest Performing Schools**
-
 Created a DataFrame with the Top 5 Performing Schools.
 
 <img src="images\HighestPerforming5.png"alt="Top5">
@@ -82,17 +76,13 @@ Created a DataFrame with the Top 5 Performing Schools.
 ---------------------------------------------------
 
 #### **Bottom 5 Performing Schools**
-
 Created a DataFrame with the Bottom 5 Performing Schools
-
 <img src="images\Bottom5.png"alt="bottom5">
 
 ---------------------------------------------------
 
 #### **Math Scores by Grade**
-
 Created a DataFrame for Math Scores by Grade.
-
 <img src="images\MathByGrade.png"alt="mathG">
 
 ---------------------------------------------------
@@ -100,13 +90,11 @@ Created a DataFrame for Math Scores by Grade.
 #### **Reading Scores by Grade**
 
 Created a DataFrame for Reading Scores by Grade.
-
 <img src="images\ReadingByGrade.png"alt="readingG">
 
 ---------------------------------------------------
 
 #### **Scores by School Spending**
-
 Created a DataFrame for Scores by School Spending.
 
 <img src="images\ScoreSchoolSpending.png"alt="schoolSpening">
@@ -114,7 +102,6 @@ Created a DataFrame for Scores by School Spending.
 ---------------------------------------------------
 
 #### **Scores by School Size**
-
 Created a DataFrame for Scores by School Size
 
 <img src="images\SML.png"alt="lms">
@@ -122,7 +109,6 @@ Created a DataFrame for Scores by School Size
 ---------------------------------------------------
 
 #### **Scores by School Type**
-
 Created a DataFrame for Scores by School Type
 
 <img src="images\SchoolType.png"alt="schooltype">
