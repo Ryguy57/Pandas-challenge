@@ -1,40 +1,45 @@
-# Pandas-challenge
 # Module 2: Pandas-challenge
 
 ## Table of Contents
-- [About](#about)
-- [Tools](#tools)
-- [Key Steps](#key-steps)
-- [Summary](#Summary)
-   - [Create Pandas DataFrame](#CSV-Files)
-   - [District Summary](#District-Summary-DataFrame)
-   - [Per School Summary](#Per-School-Summary-DataFrame)
-   - [Highest Preforming Schools](#Highest-Preforming-Schools-DataFrame)
-   - [Bottom Preforming Schools](#Bottom-Preforming-Schools-DataFrame)
-   - [Math Scores by Grade](#Math-Scores-by-Grade-DataFrame)
-   - [Reding Score by Grade](#Reading-Score-by-Grade-DataFrame)
-   - [Scores by School Spending](#Scores-by-School-Spending-DataFrame)
-   - [Score by School Size](#Scores-by-School-Size-DataFrame)
-   - [Scores by School Type ](#Scores-by-School-Type-DataFrame)
 
+* [About](#about)
+* [Tools](#tools)
+* [Key Steps](#key-steps)
+* [Summary](#summary)
+
+    * [Create Pandas DataFrame](#create-pandas-dataframe)
+    * [District Summary](#district-summary-snapshot)
+    * [Per School Summary](#per-school-summary)
+    * [Top 5 Highest Performing Schools](#top-5-highest-performing-schools)
+    * [Bottom 5 Performing Schools](#bottom-5-performing-schools)
+    * [Math Scores by Grade](#math-scores-by-grade)
+    * [Reading Scores by Grade](#reading-scores-by-grade)
+    * [Scores by School Spending](#scores-by-school-spending)
+    * [Scores by School Size](#scores-by-school-size)
+    * [Scores by School Type](#scores-by-school-type)
 
 ## About
-Aggregation of school and student data to show trends in school performance among 15 schools.
+
+This project involves the aggregation of school and student data to reveal trends in school performance among 15 schools.
 
 ## Tools
-- Jupyter Notebook
-- Pandas
-- pathlib
+
+* Jupyter Notebook
+* Pandas
+* Pathlib
 
 ## Key Steps
-#### **Import Dependencies & Merege Pandas DataFrames**
-Imported pandas and pathlib then used the = Path function to load in the CSV files [Path] Resources/schools_complete.csv and Resources/students_complete.csv
-````
+
+#### **Import Dependencies & Merge Pandas DataFrames**
+
+We begin by importing the necessary dependencies and merging data from CSV files.
+
+```python
 # Dependencies and Setup
 import pandas as pd
 from pathlib import Path
 
-# File to Load (Remember to Change These)
+# File to Load
 school_data_df = Path("Resources/schools_complete.csv")
 student_data_df = Path("Resources/students_complete.csv")
 
@@ -45,77 +50,96 @@ student_data = pd.read_csv(student_data_df)
 # Combine the data into a single dataset.
 school_df = pd.merge(student_data, school_data, how="left", on=["school_name", "school_name"])
 school_df.head()
+```
 
-`````
 ---------------------------------------------------
-#### **District Summary Snapshot**
+
+#### **Import Dependencies & Merge Pandas DataFrames**
+
 Created a high-level snapshot of the district's key metrics in a DataFrame
 
-<img src="images/DistricSnapshot.png" width="400" height="400">
+<img src="images/DistricSnapshot.png" >
 ```
 
-```
 ---------------------------------------------------
+
 #### **Per School Summary**
+
 Created a DataFrame called `per_school_summary` with columns for School Type, Total Students, Total School Budget, Per Student Budget, Average Math Score, Average Reading Score, % Passing Math, % Passing Reading,% Overall Passing.
 
+```
+```
 
 <img src="images/PerSchool.png" width="400" height="400">
 ```
 
-```
-----------------------------------------------------
+---------------------------------------------------
+
 #### **Top 5 Highest Performing Schools**
+
 Created a DataFrame with the Top 5 Performing Schools.
 
 <img src="images/HighestPerforming5.png" width="400" height="400">
+```
 
 ---------------------------------------------------
+
 #### **Bottom 5 Performing Schools**
+
 Created a DataFrame with the Bottom 5 Performing Schools
 
-
 <img src="images/Bottom5.png" width="600" height="250">
+```
 
 ---------------------------------------------------
+
 #### **Math Scores by Grade**
+
 Created a DataFrame for Math Scores by Grade.
 
-
 <img src="images/MathByGrade.png" width="150" height="250">
+```
 
 ---------------------------------------------------
+
 #### **Reading Scores by Grade**
+
 Created a DataFrame for Reading Scores by Grade.
 
-
 <img src="images/ReadingByGrade.png">
+```
 
 ---------------------------------------------------
+
 #### **Scores by School Spending**
+
 Created a DataFrame for Scores by School Spending.
 
-
 <img src="images/SchoolScoreSpending.png">
+```
 
 ---------------------------------------------------
+
 #### **Scores by School Size**
+
 Created a DataFrame for Scores by School Size
 
-
 <img src="images/SML.png">
+```
 
 ---------------------------------------------------
+
 #### **Scores by School Type**
+
 Created a DataFrame for Scores by School Type
 
-
 <img src="images/SchoolType.png">
+```
 
------------------------------------------------------
+---------------------------------------------------
 
-````
 # Summary
+
 After collecting the raw data from the PyCity School District, I cleaned and manipulated the data to apply statistics to help identify how many schools and students were in the PyCity School District by merging the raw data into one data frame. The merged data frame highlighted the District Summary, School Summary, Highest and Lowest-Performing Schools by Passing Percentage, Math and Reading Scores by Grade Level, Scores by School Spending, and Scores by School Size and Type.  I have been able to interpret these data frames and highlight key areas to make the data more cohesive and comprehensible to present to the parties of interest. This analysis will help the PyCity School District to be less reactive with resources and more proactive with strategies to bolster the district’s overall performance and student success. The report will concisely identify trends, correlations, and a synopsis of the data to present to the School Board.
 The District Summary gave a broad look into the district’s 15 school totals, student population of 39,170 and outlining the School District’s Total Budget of 24,649,428 dollars . The data frame also gave a snapshot of the school district’s 78.9 percent average math score, 81.8percent average reading score, and overall passing rate of 65.1 percent. The School Summary also identified the school names and school type. This data will be essential for developing tactical data frameworks and strategies in other analysis sections in this report.
 The Highest and Lowest-Performing Schools by Percentages gave a more narrowed interpretation of the data. The data frame indicated a strong correlation between Charter School Types having higher overall passing percentages and lower per-student budget. With the Charter School Type Overall Passing Percentage ranging from 90.5 percent to 91.3 percent and per student budget ranging from 582 dollars to 638 dollars. Meanwhile, the District School Types had higher per-student budget ranging from 655 dollars to 637 dollars and lower overall passing rates ranging from 52.9percent to 53.3percent.
